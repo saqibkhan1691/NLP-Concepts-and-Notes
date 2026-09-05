@@ -71,3 +71,32 @@ Stopwords are the words which are filtered out before or after processing of tex
 
 In a sentence/paragraph there are many entities like Person, Place, Date, Time, Money, Organization, Percent, etc then we need to identitfy those entities that helps in text preprocessing
 
+# Sentiment Analysis:
+
+Sentiment Analysis means finding the emotion or opinion expressed in a text.
+
+In simple words, it tells us whether a sentence is:
+
+Positive -> "I love this movie."
+
+Neutral -> "The movie starts at 7 PM."
+
+Negative -> "I hate this movie."
+
+For Sentiment Analysis we need to convert text into vector/numbers and there are many ways of conversion
+
+One Hot Encoding is a technique used in NLP to represent words or categories as numerical vectors containing 0s and 1s, so that machine learning models can process them.
+
+![alt text](<WhatsApp Image 2026-09-05 at 8.22.06 PM.jpeg>)
+
+## Advantges:
+
+1) Easy to implement with python [sklearn, OHE, pd.get_dummies()]
+
+
+## Disadvantages:
+1) Sparse matrix reason overfitting (good accuracy for training data but gives bad accuracy for new data)
+2) ML Algorithm need fixed size of input words
+3) No semantic meaning is getting captured ex-> The food is good (we dont know which word is more important/relation/etc sentences)
+4) Out of Vocabulary (when new word is coming then it not in vocaluary)
+
