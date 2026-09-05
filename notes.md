@@ -85,9 +85,23 @@ Negative -> "I hate this movie."
 
 For Sentiment Analysis we need to convert text into vector/numbers and there are many ways of conversion
 
+# Types of ways to convert text into vectorrs:
+
+1) One Hot Encoded
+
+2) Bag of Words (Bow)
+
+3) TF-IDF
+
+4) Word2Vec
+
+5) AvgWord2Vec
+
+## 1) OHE:
+
 One Hot Encoding is a technique used in NLP to represent words or categories as numerical vectors containing 0s and 1s, so that machine learning models can process them.
 
-![alt text](<WhatsApp Image 2026-09-05 at 8.22.06 PM.jpeg>)
+![WhatsApp Image](WhatsApp%20Image%202026-09-05%20at%208.22.06%20PM-1.jpeg)
 
 ## Advantges:
 
@@ -99,4 +113,3 @@ One Hot Encoding is a technique used in NLP to represent words or categories as 
 2) ML Algorithm need fixed size of input words
 3) No semantic meaning is getting captured ex-> The food is good (we dont know which word is more important/relation/etc sentences)
 4) Out of Vocabulary (when new word is coming then it not in vocaluary)
-
