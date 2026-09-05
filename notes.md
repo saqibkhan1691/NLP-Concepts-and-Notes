@@ -65,3 +65,4 @@ It is similar to stemming but in lemmitization the output word after lemmitizati
 
 # Stopwards in NLP:
 
+Stopwords are the words which are filtered out before or after processing of text. These are the most common words in a language. For example, in English, the words "is", "and", "the", "a" are considered stopwords. These words do not carry significant meaning and are often removed from text data to improve the performance of NLP tasks.
