@@ -160,5 +160,35 @@ IDF (Inverse Document Frequency) → Word kitne documents mein common hai.
 
 # Word Embedding:
 
+A numerical vector representation of a word that captures its meaning and relationships with other words.
 
 ![Image](C:\Projects\NLP_Concepts_and_Notes\WordEmbeddings.png)
+
+
+
+# Word2Vec:
+
+A technique that converts words into numerical vectors while learning their semantic and contextual relationships.
+
+## Cosine Similarity:
+
+A measure used to calculate the similarity between two vectors based on the angle between them.
+dsitance = 1 - cos(theata)
+
+For example-> if distance near to 0 then both vectors are similar and if near to 1 then opposite to each other
+
+                Large Text Corpus
+                       ↓
+                  Word2Vec
+                       ↓
+             Learn word embeddings
+                       ↓
+         Each word → Numerical Vector
+                       ↓
+            Semantic relationships
+                       ↓
+          Cosine Similarity
+                       ↓
+       Find similar/related words
+
+![Image](C:\Projects\NLP_Concepts_and_Notes\Word2Vec.png)
