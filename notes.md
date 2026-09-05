@@ -101,7 +101,7 @@ For Sentiment Analysis we need to convert text into vector/numbers and there are
 
 One Hot Encoding is a technique used in NLP to represent words or categories as numerical vectors containing 0s and 1s, so that machine learning models can process them.
 
-![WhatsApp Image](WhatsApp%20Image%202026-09-05%20at%208.22.06%20PM-1.jpeg)
+![Image](WhatsApp%20Image%202026-09-05%20at%208.22.06%20PM-1.jpeg)
 
 ## Advantges:
 
@@ -111,5 +111,54 @@ One Hot Encoding is a technique used in NLP to represent words or categories as 
 ## Disadvantages:
 1) Sparse matrix reason overfitting (good accuracy for training data but gives bad accuracy for new data)
 2) ML Algorithm need fixed size of input words
-3) No semantic meaning is getting captured ex-> The food is good (we dont know which word is more important/relation/etc sentences)
+3) No semantic meaning is getting captured ex-> The food is good (we dont know which word is more important/relation/etc)
 4) Out of Vocabulary (when new word is coming then it not in vocaluary)
+
+## 2) Bag of Words (Bow):
+
+Bag of Words is a technique used in NLP to represent text as numerical vectors based on the frequency of words in the text.
+
+![Image](C:\Projects\NLP_Concepts_and_Notes\image.png)
+
+## Advantges:
+
+1) Easy to implement with python
+2) Fixed Sized Input words -> ML Algorithms
+
+
+## Disadvantages:
+1) Sparse matrix reason overfitting (good accuracy for training data but gives bad accuracy for new data)
+2) Ordering of the word is getting changed
+3) No semantic meaning is getting captured ex-> The food is good and The food is not good (we dont know which word is more important/relation/etc)
+The food is good -> [1 1 1 0 1] v1
+The food is not good -> [1 1 1 1 1] v2
+when we plot graph then both vector v1 and v2 similar because angle is small between them but in actual both are opposite word 
+4) Out of Vocabulary (when new word is coming then it not in vocaluary)
+
+## 3) TF-IDF:
+
+TF-IDF is an NLP technique that assigns a numerical importance score to words based on their frequency in a document and rarity across all documents.
+
+TF-IDF = Term Frequency × Inverse Document Frequency
+
+TF (Term Frequency) → Word document mein kitni baar aaya.
+IDF (Inverse Document Frequency) → Word kitne documents mein common hai.
+
+![Image](C:\Projects\NLP_Concepts_and_Notes\TF_IDF.png)
+
+## Advantges:
+
+1) Intuitive -> Easy to understand and implement because text is simply converted into numerical values based on word frequency/importance.
+2) Fixed Sized Input words -> ML Algorithms
+3) Word Importance is getting captured
+
+
+## Disadvantages:
+
+1) Sparse matrix reason overfitting (good accuracy for training data but gives bad accuracy for new data)
+2 Out of Vocabulary (when new word is coming then it not in vocaluary)
+
+# Word Embedding:
+
+
+![Image](C:\Projects\NLP_Concepts_and_Notes\WordEmbeddings.png)
