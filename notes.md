@@ -175,7 +175,10 @@ A technique that converts words into numerical vectors while learning their sema
 A measure used to calculate the similarity between two vectors based on the angle between them.
 dsitance = 1 - cos(theata)
 
-For example-> if distance near to 0 then both vectors are similar and if near to 1 then opposite to each other
+For example-> if distance near to 0 then both vectors are similar and if near to 1 then opposite to each other  (0 <= Distance <=1)
+
+Similarity high → distance low
+Similarity low → distance high
 
                 Large Text Corpus
                        ↓
@@ -192,3 +195,95 @@ For example-> if distance near to 0 then both vectors are similar and if near to
        Find similar/related words
 
 ![Image](C:\Projects\NLP_Concepts_and_Notes\Word2Vec.png)
+
+## There are two type of Word2Vec:
+
+-CBOW (Continuous Bag of Words)
+-Skipgram
+
+## 1) CBOW:
+
+CBOW predicts a target word from its surrounding context words and learns word embeddings during this process.
+
+For example ->
+
+Sentence = "The cat is sitting on the mat"
+
+If target word is:
+sitting
+
+CBOW might take:
+cat, is, on, the
+
+and predict:
+sitting
+
+![Image](C:\Projects\NLP_Concepts_and_Notes\CBOW.png)
+
+### 2. Context Window:
+
+Context window defines how many surrounding words are considered to predict the target word.
+
+Example:
+
+I love eating mangoes
+      ↑
+Context → love, eating, mangoes
+Target  → I
+
+### 3. One-Hot Encoding:
+
+Context words are converted into one-hot vectors before being given to the neural network.
+
+Example:
+
+I → [1,0,0,0]
+love → [0,1,0,0]
+
+### 4. Input Layer:
+
+The input layer receives the one-hot encoded vectors of the context words.
+
+Context Words → One-Hot Vectors → Input Layer
+
+### 5. Hidden Layer / Weight Matrix:
+
+The hidden layer contains learnable weights, which are used to learn the word embeddings.
+
+One-Hot Vector × Weight Matrix → Word Embedding
+
+Important: The learned weights represent the word embeddings.
+
+### 6. Combining Context Words:
+
+CBOW combines the embeddings of all context words, usually by taking their average, to create a context representation.
+
+Embedding₁ + Embedding₂ + ... → Average → Context Representation
+
+### 7. Output Layer:
+
+The output layer predicts the target word from the combined context representation.
+
+Example:
+
+Context → CBOW → Data
+
+It produces a score/probability for every word in the vocabulary.
+
+### 8. Softmax:
+
+Softmax converts the output scores into probabilities for each word in the vocabulary.
+
+Example:
+
+Data     → 0.85
+Company  → 0.05
+Science  → 0.03
+
+The word with the highest probability is selected as the prediction.
+
+### 9. Backpropagation:
+
+Backpropagation calculates the error between the predicted and actual word and updates the weights to improve the model.
+
+Prediction → Error → Backpropagation → Weight Update
