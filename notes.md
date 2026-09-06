@@ -16,9 +16,9 @@ Step 6) Transformer (DL part)
 
 Step 7) BERT (DL part)
 
-### Note: From going step 1 to step 7 the accuracy of model will imporve but size of model will also increase
+Libraries: nltk, spaCy, Tensorflow/Pytorch
 
-### Libraries: NLTK, spaCy, Tensorflow/Pytorch
+### Note: From going step 1 to step 7 the accuracy of model will imporve but size of model will also increase
 
 # Tokenization in NLP:
 
@@ -220,33 +220,35 @@ sitting
 
 ![Image](C:\Projects\NLP_Concepts_and_Notes\CBOW.png)
 
-### 2. Context Window:
+### 1. Context Window:
 
 Context window defines how many surrounding words are considered to predict the target word.
 
 Example:
 
 I love eating mangoes
-      ↑
+
 Context → love, eating, mangoes
+
 Target  → I
 
-### 3. One-Hot Encoding:
+### 2. One-Hot Encoding:
 
 Context words are converted into one-hot vectors before being given to the neural network.
 
 Example:
 
 I → [1,0,0,0]
+
 love → [0,1,0,0]
 
-### 4. Input Layer:
+### 3. Input Layer:
 
 The input layer receives the one-hot encoded vectors of the context words.
 
 Context Words → One-Hot Vectors → Input Layer
 
-### 5. Hidden Layer / Weight Matrix:
+### 4. Hidden Layer / Weight Matrix:
 
 The hidden layer contains learnable weights, which are used to learn the word embeddings.
 
@@ -254,13 +256,13 @@ One-Hot Vector × Weight Matrix → Word Embedding
 
 Important: The learned weights represent the word embeddings.
 
-### 6. Combining Context Words:
+### 5. Combining Context Words:
 
 CBOW combines the embeddings of all context words, usually by taking their average, to create a context representation.
 
 Embedding₁ + Embedding₂ + ... → Average → Context Representation
 
-### 7. Output Layer:
+### 6. Output Layer:
 
 The output layer predicts the target word from the combined context representation.
 
@@ -270,19 +272,21 @@ Context → CBOW → Data
 
 It produces a score/probability for every word in the vocabulary.
 
-### 8. Softmax:
+### 7. Softmax:
 
 Softmax converts the output scores into probabilities for each word in the vocabulary.
 
 Example:
 
 Data     → 0.85
+
 Company  → 0.05
+
 Science  → 0.03
 
 The word with the highest probability is selected as the prediction.
 
-### 9. Backpropagation:
+### 8. Backpropagation:
 
 Backpropagation calculates the error between the predicted and actual word and updates the weights to improve the model.
 
