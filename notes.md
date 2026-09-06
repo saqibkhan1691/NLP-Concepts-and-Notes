@@ -304,7 +304,7 @@ Word2Vec vectors
 
        ↓
 
-    Average
+Average
 
        ↓
 
