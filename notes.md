@@ -301,9 +301,13 @@ Prediction → Error → Backpropagation → Weight Update
 AvgWord2Vec represents a sentence/document by taking the average of the Word2Vec vectors of all its words and the reason for average is because it takes the average of all word embeddings in the sentence.
 
 Word2Vec vectors
+
        ↓
+
     Average
+
        ↓
+
 Sentence Vector
 
 ![Image](C:\Projects\NLP_Concepts_and_Notes\AvgWord2Vec.png)
@@ -313,6 +317,7 @@ AvgWord2Vec is a technique for converting a sentence or document into a fixed-si
 Word2Vec har individual word ka vector deta hai:
 
 food  → [0.2, 0.5, ... 300 dimensions]
+
 good  → [0.7, 0.1, ... 300 dimensions]
 
 But ML model ko agar poori sentence ka input dena hai, toh sentence-level vector chahiye.
@@ -322,6 +327,7 @@ But ML model ko agar poori sentence ka input dena hai, toh sentence-level vector
 Word2Vec har individual word ka vector deta hai:
 
 food  → [0.2, 0.5, ... 300 dimensions]
+
 good  → [0.7, 0.1, ... 300 dimensions]
 
 But ML model ko agar poori sentence ka input dena hai, toh sentence-level vector chahiye.
