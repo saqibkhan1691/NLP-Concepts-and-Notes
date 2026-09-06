@@ -291,3 +291,55 @@ The word with the highest probability is selected as the prediction.
 Backpropagation calculates the error between the predicted and actual word and updates the weights to improve the model.
 
 Prediction → Error → Backpropagation → Weight Update
+
+## 2) Skipgram:
+
+![Image](C:\Projects\NLP_Concepts_and_Notes\Skipgram.png)
+
+# AvgWord2Vec:
+
+AvgWord2Vec represents a sentence/document by taking the average of the Word2Vec vectors of all its words and the reason for average is because it takes the average of all word embeddings in the sentence.
+
+Word2Vec vectors
+       ↓
+    Average
+       ↓
+Sentence Vector
+
+![Image](C:\Projects\NLP_Concepts_and_Notes\AvgWord2Vec.png)
+
+AvgWord2Vec is a technique for converting a sentence or document into a fixed-size vector. It takes the Word2Vec embedding of each word and averages them to create a single sentence vector. For example, if each word has a 300-dimensional embedding, the final sentence representation will also have 300 dimensions, regardless of the sentence length.
+
+Word2Vec har individual word ka vector deta hai:
+
+food  → [0.2, 0.5, ... 300 dimensions]
+good  → [0.7, 0.1, ... 300 dimensions]
+
+But ML model ko agar poori sentence ka input dena hai, toh sentence-level vector chahiye.
+
+## Limitation of Word2Vec:
+
+Word2Vec har individual word ka vector deta hai:
+
+food  → [0.2, 0.5, ... 300 dimensions]
+good  → [0.7, 0.1, ... 300 dimensions]
+
+But ML model ko agar poori sentence ka input dena hai, toh sentence-level vector chahiye.
+
+## Most important difference:
+
+Word2Vec:
+
+Word → Vector
+
+AvgWord2Vec:
+
+Sentence → Average of word vectors → One Vector
+
+BoW/TF-IDF:
+
+Sentence → Vocabulary-based vector
+
+AvgWord2Vec:
+
+Sentence → Semantic word embeddings → Average → Fixed-size vector
